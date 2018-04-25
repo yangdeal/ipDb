@@ -3,20 +3,22 @@ This will be an application to run on AWS lambda, function will be get the ip ad
 The detail need to be add as developing.
 
 Data structure:
-1. DynamoDb 
+1. Configuration file is "ipDb.yml". Refer to ipDb.yml.sample as a template.
+
+2. DynamoDb 
     1. table name: ipDb
     2. structure:
         ```json
         {
         "ipSubnet": "1.1.1",
-        "ipLocation": "China, Dalian",
+        "ipLocation": "China, Beijing",
         "hit": "99999",
         "LastHit": "2018/01/01 1:10"
         }    
     
         ```
 
-2. One lambda triggered with IP address as input, the lambda will store the IP subnet (/24) to dynamoDb.
+3. One lambda triggered with IP address as input, the lambda will store the IP subnet (/24) to dynamoDb.
     1. function name: inputIp
     2. input:
         ```array

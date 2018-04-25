@@ -10,6 +10,7 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.21'
 }
 
 task buildZip(type: Zip) {
