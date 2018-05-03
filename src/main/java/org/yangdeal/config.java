@@ -8,7 +8,7 @@ import java.io.InputStream;
 
 public final class config {
 
-    final String configfile = "ipDb.yml";
+    final String configfile = "/ipDb.yml";
     Yaml yaml = new Yaml();
 
     private String dbTableName = "ipDb";
