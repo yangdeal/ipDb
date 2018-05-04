@@ -18,29 +18,11 @@ public class dbTest {
     public void test2() {
         DynamoDB db = dbConnect();
         dbTable test = new dbTable();
-        try {
-            test.createTable(db);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
-        try {
-            test.addItem(db);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            Assert.assertEquals("The Big New Movie", test.queryTable(db));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        try {
-            test.deleteTable(db);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        test.createTable(db);
+        test.addItem(db);
+        Assert.assertEquals("The Big New Movie", test.queryTable(db));
+        test.deleteTable(db);
 
     }
 }

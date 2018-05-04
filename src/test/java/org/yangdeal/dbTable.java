@@ -38,7 +38,7 @@ public class dbTable {
         return dynamoDB;
     }
 
-    public static void createTable(DynamoDB dbConnect) throws Exception {
+    public static void createTable(DynamoDB dbConnect) {
 
         String tableName = "Movies";
 
@@ -61,7 +61,7 @@ public class dbTable {
     }
 
 
-    public static void addItem(DynamoDB dbConnect) throws Exception {
+    public static void addItem(DynamoDB dbConnect) {
 
         Table table = dbConnect.getTable("Movies");
 
@@ -86,7 +86,7 @@ public class dbTable {
 
     }
 
-    public static void deleteTable(DynamoDB dbConnect) throws Exception {
+    public static void deleteTable(DynamoDB dbConnect) {
 
         Table table = dbConnect.getTable("Movies");
 
@@ -102,7 +102,7 @@ public class dbTable {
         }
     }
 
-    public static String queryTable(DynamoDB dbconnect) throws Exception {
+    public static String queryTable(DynamoDB dbconnect) {
 
         Table table = dbconnect.getTable("Movies");
 
