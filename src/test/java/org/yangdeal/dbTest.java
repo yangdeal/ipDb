@@ -17,12 +17,11 @@ public class dbTest {
     @Test
     public void test2() {
         DynamoDB db = dbConnect();
-        dbTable test = new dbTable();
 
-        test.createTable(db);
-        test.addItem(db);
-        Assert.assertEquals("The Big New Movie", test.queryTable(db));
-        test.deleteTable(db);
+        dbTable.createTable(db);
+        dbTable.addItem(db);
+        Assert.assertEquals("The Big New Movie", dbTable.queryTable(db));
+        dbTable.deleteTable(db);
 
     }
 }

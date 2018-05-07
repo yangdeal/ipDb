@@ -5,7 +5,7 @@ Reference:
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Java.03.html
 
 start local DynamoDB:
-docker run -v "$PWD":/dynamodb_local_db -p 8000:8000 cnadiminti/dynamodb-local:latest
+docker run -d -v "$PWD":/dynamodb_local_db -p 8000:8000 cnadiminti/dynamodb-local:latest
 
 */
 
