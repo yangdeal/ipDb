@@ -1,0 +1,7 @@
+- dynamodb:
+    table: "ipDb"
+    endpoint: ""
+
+- funtion1:
+    abc: "123"
+    bcd: "456"
